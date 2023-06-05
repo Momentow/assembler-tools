@@ -43,7 +43,7 @@ section .text
 		mov dl, 0
 		call printf
 
-		; return
+		; exit
 		add rsp, 8
 		sub rax, rax
 		ret
