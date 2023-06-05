@@ -24,6 +24,7 @@ section .text
         lea     rdi, [інпут_формат]
         xor     rax, rax
         call    scanf
+
         inc     r15d
         cmp     eax, 1
         je     input_loop
