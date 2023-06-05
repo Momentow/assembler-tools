@@ -16,5 +16,11 @@ nasm -f elf64 "$filename" -o "${filename%.asm}.o"
 # Link the object file
 cc -o "${filename%.asm}" "${filename%.asm}.o" -no-pie
 
+# Delete object file
+rm "${filename%.asm}.o"
+
 # Run the executable
 "./${filename%.asm}"
+
+# Delete executable file
+rm "./${filename%.asm}"
